@@ -121,14 +121,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHR-KJ-KP3">
-                                                <rect key="frame" x="166" y="90" width="42" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Mh1-Xs-W1h">
+                                                <rect key="frame" x="0.0" y="120.5" width="374" height="6"/>
+                                                <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="MzV-nx-BG9"/>
+                                                </constraints>
+                                                <color key="trackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Mh1-Xs-W1h" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="1PC-aU-wZK"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mh1-Xs-W1h" secondAttribute="trailing" id="5UC-l1-SZv"/>
+                                            <constraint firstItem="Mh1-Xs-W1h" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="wrb-Fe-PsJ"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -143,8 +149,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="countDownLabel" destination="XHR-KJ-KP3" id="FmR-30-NrJ"/>
-                        <outlet property="timerLabel" destination="XHR-KJ-KP3" id="MMe-uD-xYY"/>
+                        <outlet property="progessBar" destination="Mh1-Xs-W1h" id="b41-eD-riL"/>
+                        <outlet property="titleLabel" destination="XLm-5r-pSP" id="AYw-wM-xk3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
